@@ -1,27 +1,27 @@
-import {Router} from 'express'
+import { Router } from "express";
 
 const router = Router();
 
-router.get('/users', (req, res) => {
-    res.send('obteniendo usuarios')
-})
+router.get("/users", (req, res) => {
+  res.send("obteniendo usuarios");
+});
 
-router.get('/users/:id', (req, res) => {
-    const {id} = req.params
-    res.send('obteniendo usuario' )
-})
+router.get("/users/:id", (req, res) => {
+  const { id } = req.params;
+  res.send("obteniendo usuario" + id);
+});
 
-router.post('/users', (req, res) => {
-    res.send('creando usuario')
-})
+router.post("/users", (req, res) => {
+  res.send("creando usuario");
+});
 
-router.get('/users', (req, res) => {
-    res.send('obteniendo usuarios')
-})
+router.delete("/users/:id", (req, res) => {
+  res.send("eliminando usuarios");
+});
 
-router.get('/users', (req, res) => {
-    res.send('obteniendo usuarios')
-})
+router.put("/users/:id", (req, res) => {
+  const { id } = req.params;
+  res.send("actualizando usuario" + id);
+});
 
-
-export default router; 
+export default router;
