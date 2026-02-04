@@ -1,4 +1,5 @@
-import { Router } from "express";
+import { Router } from 'express';
+import { crearUsuario } from '../controllers/usercontrollers.js';
 
 const router = Router();
 
@@ -11,9 +12,8 @@ router.get("/users/:id", (req, res) => {
   res.send("obteniendo usuario" + id);
 });
 
-router.post("/users", (req, res) => {
-  res.send("creando usuario");
-});
+router.post("/user/register", crearUsuario);
+
 
 router.delete("/users/:id", (req, res) => {
   res.send("eliminando usuarios");
@@ -24,4 +24,4 @@ router.put("/users/:id", (req, res) => {
   res.send("actualizando usuario" + id);
 });
 
-export default router;
+module.exports = router;
