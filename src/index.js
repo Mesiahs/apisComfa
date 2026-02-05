@@ -10,6 +10,5 @@ app.use(morgan('dev'));
 app.use(express.json());
 app.use(userRoutes);
 
-app.listen(PORT, () => {
-  console.log(`se inicia el servidor por el puerto: ${PORT}`);
-});
+app.listen(PORT);
+console.log('Server on port', PORT); 
