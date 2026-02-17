@@ -4,14 +4,10 @@ import { getUsers, getUser, createUser, deleteUser, updateUser } from "../contro
 
 const router = Router();
 
-router.get("/users", getUsers);
-
-router.get("/users/:id", getUser );
-
-router.post("/users", createUser);
-
-router.delete("/users/:id", deleteUser);
-
-router.put("/users/:id", updateUser);
+router.get("/", getUsers);
+router.get("/:id", getUser );
+router.post("/", createUser);
+router.delete("/:id", deleteUser);
+router.put("/:id", updateUser);
 
 export default router;
